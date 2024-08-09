@@ -1,0 +1,90 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Badge from '@components/Badge.astro';
+import LinkedInIcon from '../components/icons/LinkedIn.astro'
+import SocialPill from '@components/SocialPill.astro';
+import GitHubIcon from '@components/icons/GitHub.astro';
+import MailIcon from '@components/icons/Mail.astro';
+import Experience from '@components/Experience.astro';
+import SectionContainer from '@components/SectionContainer.astro';
+import Briefcase from '@components/icons/Briefcase.astro';
+import CodeIcon  from '@components/icons/Code.astro';
+import Contact from '@components/Contact.astro';
+import Projects from '@components/Projects.astro';
+import MessageIcon from '@components/icons/Message.astro';
+
+---
+
+<Layout
+ title="Porfolio de Aleja- Full-Stack Web Developer"
+description="Contrata mi servicio, estare encantada de poder ayudar con tus proyectos "
+>
+	<main class="px-4">
+		<SectionContainer  class="py-44 pb-32">
+			 <img
+    class="rounded-full size-12  mb-4" 
+    src="https://media.licdn.com/dms/image/D4E03AQGIsmag0hJgrA/profile-displayphoto-shrink_200_200/0/1697492592521?e=2147483647&v=beta&t=UGwS-m3LT2SeqR6ZtzvFwluzNo3rru4ZLKFzrvcD6fc" 
+    alt="ale photo"
+    />
+		<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex 
+		flex-row gap-x4 pb-6 lg:pb-10">
+			Hey, soy aleja <a href="https://www.linkedin.com/in/b-alejandra-león-pérez" 
+			target="_blank" 
+			rel="noopener" 
+			class="justify-center items-center" >
+		    <Badge>Disponible para trabajar</Badge>
+		</a>
+		</h1>
+		<h2 class="text-xl lg:text-2xl text-white text-wrap max-w-[600px]">
+			<span> Desarrollador Web FullStack.</span><span class="text-yellow-200/90">
+				 1 año de experiencia.</span>
+
+			 <span class="text-red-200/90"> De Nariño, Colombia.</span> 
+			 <span class="opacity-75"> Mi interés es contribuir a proyectos que aprovechen la tecnología para marcar la diferencia. Enfrentar desafíos tecnológicos me llena de emoción, ya que los veo como oportunidades para aprender y crecer. Estoy comprometida a mantenerme actualizada en las últimas tendencias tecnológicas para seguir innovando y mejorando continuamente.</span>
+		</h2>
+
+			<nav class="flex gap-4 text-white mt-8 flex-wrap">
+				<SocialPill href="https://www.linkedin.com/in/b-alejandra-león-pérez">
+              <LinkedInIcon class="size-4 md:size-6" />
+				LinkedIn
+				</SocialPill>
+				<SocialPill href="https://github.com/aleja223">
+              <GitHubIcon class="size-4 md:size-6" />
+				GitHub
+				</SocialPill>
+				<SocialPill href="mailto:balby223@gmail.com">
+              <MailIcon class="size-4 md:size-6" />
+				balby223@gmail.com
+				</SocialPill>
+			</nav>
+			</SectionContainer>
+
+		<SectionContainer id="experiencia">
+			<h2 class="text-3xl text-white font-semibold mb-6 flex gap-x-3 items-center">
+				<Briefcase class:list="size-7"/>
+				Experiencia Laboral
+			</h2>
+			<Experience/>
+	    </SectionContainer>
+
+		<SectionContainer id="proyectos">
+			<h2 class="text-xl text-white font-semibold mb-6 flex gap-x-3 items-center">
+				<CodeIcon class:list="size-8"/>
+				Proyectos
+			</h2>
+			<Projects/>
+	    </SectionContainer>
+
+		<SectionContainer id="contacto">
+			<h2 class="text-xl text-white font-semibold mb-6 flex gap-x-3 items-center">
+				<MessageIcon class:list="size-8"/>
+				Contacto
+			</h2>
+			<Contact/>
+	    </SectionContainer>
+		
+	</main>
+
+
+</Layout>

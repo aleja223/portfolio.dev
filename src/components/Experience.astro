@@ -1,0 +1,39 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCE = [
+    {
+        date: "Mayo- Julio 2023",
+        title: "Full-Stack Teaching Assistant-SoyHenry",
+        description: "Coordinar y liderar un grupo de estudiantes para lograr la integración al equipo de estudio. Asistir a la resolución de ejercicios y promover la colaboración grupal (Pair Programming). Proponer ideas para la mejora de los procesos del bootcamp.",
+    
+        
+    },
+    {
+        date: "Marzo 2023",
+        title: "agreagar pendiente...",
+        description: "funciones funciones funciones pendiente......",
+        
+        
+    },
+    {
+         date: "Abril 2023",
+        title: "Pendiente agregar",
+        description: "agregar funciones....",
+        
+       
+    }
+];
+
+---
+
+<ol class="relative border-s border-gray-200 ml-4 ">  
+    
+    {
+        EXPERIENCE.map(experiencie =>(
+            <li class="mb-10 ms-4">
+           <ExperienceItem {...experiencie }/>
+            </li>
+        ))
+    }    
+</ol>
+
