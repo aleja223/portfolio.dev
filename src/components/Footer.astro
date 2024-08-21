@@ -1,17 +1,22 @@
-
-
+---
+import Badge from '@components/Badge.astro';
+---
 <footer class="rounded-lg shadow m-4 bg-black/20 backdrop-blur-lg w-full w-[1120px] mx-auto mb-10 mx-auto">
     <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
-      <span class="sm:text-center text-yellow-200/90">© 2023 <a href="https://aleja.dev/" class="hover:underline">AlejaLeón™</a>.Casi todos los derechos reservados.
+      <span class="sm:text-center opacity-85 text-black">© 2023 <a href="https://aleja.dev/" class="hover:underline">AlejandraLeón™</a>.Casi todos los derechos reservados.
     </span>
     <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-white/90 sm:mt-0">
         <li>
-            <a href="#" class="hover:underline me-4 md:me-6">Sobre mí</a>
+            <a href="https://www.linkedin.com/in/b-alejandra-león-pérez" 
+			target="_blank" 
+			rel="noopener" 
+			class="justify-center items-center" >
+		     <Badge class="text-2xl px-6 py-3 bg-blue-600 text-white rounded-lg">¡Empecemos juntos!</Badge> 
+		</a>
         </li>
       
-        <li>
-            <a href="#" class="hover:underline">Contacto</a>
-        </li>
+
+       
     </ul>
     </div>
 </footer>

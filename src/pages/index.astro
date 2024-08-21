@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
-import Badge from '@components/Badge.astro';
+//import Badge from '@components/Badge.astro';
 import LinkedInIcon from '../components/icons/LinkedIn.astro'
 import SocialPill from '@components/SocialPill.astro';
 import GitHubIcon from '@components/icons/GitHub.astro';
@@ -14,11 +14,12 @@ import Contact from '@components/Contact.astro';
 import Projects from '@components/Projects.astro';
 import MessageIcon from '@components/icons/Message.astro';
 
+
 ---
 
 <Layout
- title="Porfolio de Aleja- Full-Stack Web Developer"
-description="Contrata mi servicio, estare encantada de poder ayudar con tus proyectos "
+ title="Porfolio de AlejandraL- Full-Stack Web Developer"
+description="Quiero aportar a tus proyectos "
 >
 	<main class="px-4">
 		<SectionContainer  class="py-44 pb-32">
@@ -27,24 +28,21 @@ description="Contrata mi servicio, estare encantada de poder ayudar con tus proy
     src="https://media.licdn.com/dms/image/D4E03AQGIsmag0hJgrA/profile-displayphoto-shrink_200_200/0/1697492592521?e=2147483647&v=beta&t=UGwS-m3LT2SeqR6ZtzvFwluzNo3rru4ZLKFzrvcD6fc" 
     alt="ale photo"
     />
-		<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex 
+		<h1 class="text-xl text-purple-900 text-3xl md:text-4xl lg:text-5xl font-bold flex 
 		flex-row gap-x4 pb-6 lg:pb-10">
-			Hey, soy aleja <a href="https://www.linkedin.com/in/b-alejandra-león-pérez" 
-			target="_blank" 
-			rel="noopener" 
-			class="justify-center items-center" >
-		    <Badge>Disponible para trabajar</Badge>
+			Hola, Soy Alejandra León 
 		</a>
 		</h1>
-		<h2 class="text-xl lg:text-2xl text-white text-wrap max-w-[600px]">
-			<span> Desarrollador Web FullStack.</span><span class="text-yellow-200/90">
-				 1 año de experiencia.</span>
+		<h2 class="text-xl text-zinc-200 mb-2 lg:text-2xl text-wrap max-w-[8000px]">
+			<p> Desarrolladora Web FullStack y Abogada</p>
+			<span class="opacity-85 text-black">
+				 Dirijo mi pasión por los retos y la resolución de problemas hacia el emocionante universo de la tecnología.</span>
 
-			 <span class="text-red-200/90"> De Nariño, Colombia.</span> 
-			 <span class="opacity-75"> Mi interés es contribuir a proyectos que aprovechen la tecnología para marcar la diferencia. Enfrentar desafíos tecnológicos me llena de emoción, ya que los veo como oportunidades para aprender y crecer. Estoy comprometida a mantenerme actualizada en las últimas tendencias tecnológicas para seguir innovando y mejorando continuamente.</span>
+			 <span class="opacity-85 text-black"> Me agrada enfrentar retos tecnológicos, viendo cada desafío como una oportunidad para aprender y crecer.</span> 
+			 <span class="opacity-85 text-black">Procuro estar al tanto en las tendencias tecnológicas, para innovar y aportar de manera efectiva a los proyectos en los que participo.</span>
 		</h2>
 
-			<nav class="flex gap-4 text-white mt-8 flex-wrap">
+			<nav class="flex gap-4 mt-8 flex-wrap">
 				<SocialPill href="https://www.linkedin.com/in/b-alejandra-león-pérez">
               <LinkedInIcon class="size-4 md:size-6" />
 				LinkedIn
@@ -60,8 +58,10 @@ description="Contrata mi servicio, estare encantada de poder ayudar con tus proy
 			</nav>
 			</SectionContainer>
 
+			
+
 		<SectionContainer id="experiencia">
-			<h2 class="text-3xl text-white font-semibold mb-6 flex gap-x-3 items-center">
+			<h2 class="text-3xl text-purple-900 font-semibold mb-6 flex gap-x-3 items-center">
 				<Briefcase class:list="size-7"/>
 				Experiencia Laboral
 			</h2>
@@ -69,16 +69,16 @@ description="Contrata mi servicio, estare encantada de poder ayudar con tus proy
 	    </SectionContainer>
 
 		<SectionContainer id="proyectos">
-			<h2 class="text-xl text-white font-semibold mb-6 flex gap-x-3 items-center">
-				<CodeIcon class:list="size-8"/>
+			<h2 class="text-3xl text-purple-900 font-semibold mb-6 flex gap-x-3 items-center">
+				<CodeIcon class:list="size-7"/>
 				Proyectos
 			</h2>
 			<Projects/>
 	    </SectionContainer>
 
 		<SectionContainer id="contacto">
-			<h2 class="text-xl text-white font-semibold mb-6 flex gap-x-3 items-center">
-				<MessageIcon class:list="size-8"/>
+			<h2 class="text-3xl text-purple-900 font-semibold mb-6 flex gap-x-3 items-center">
+				<MessageIcon class:list="size-7"/>
 				Contacto
 			</h2>
 			<Contact/>

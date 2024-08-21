@@ -3,40 +3,102 @@
 const PROJECTS = [
     {
         title:'TrendyTech-e-commerce de productos de computación',
-        description:'Incluye registro, confirmación, autenticación, reseteo de contraseñas,autenticación de terceros con Google, pasarela de pagos con Mercado Pago, Dashboard de admin, borrado lógico, cookies. Como administrador puedes crear, editar y eliminar las propiedades de cada producto en venta, banear y restringir a los usuarios que atenten con las políticas normativas, ver el flujo de ventas. Como usuario debes registrarte o logearte con Google para poder concretar una compra, puedes añadir productos a "favoritos" puedes puntuar tu compra y editar tu perfil.',
+        description:[
+         "Registro, confirmación, autenticación, reseteo de contraseñas,autenticación de terceros con Google", 
+         "Pasarela de pagos con Mercado Pago, Dashboard de admin, borrado lógico, cookies.", 
+        "Como administrador puedes crear, editar y eliminar las propiedades de cada producto en venta",
+         "Banear y restringir a los usuarios que atenten con las políticas normativas, ver el flujo de ventas.", 
+         "Como usuario debes registrarte o logearte con Google para poder concretar una compra, puedes añadir productos a favoritos y puntuar tu compra y editar tu perfil"
+        ],
 
       link:'https://trendy-tech.onrender.com',
-      GitHubFrontend:'https://github.com/Rey5440/TrendyTech-Front',
-      GitHubBackend:'https://github.com/Rey5440/TrendyTech-Back',
+      gitHubFrontend:'https://github.com/Rey5440/TrendyTech-Front',
+      gitHubBackend:'https://github.com/Rey5440/TrendyTech-Back',
       image:'/projects/rendyTech.webp',
-      tags:['JavaScript, React, CSS, NodeJS, Express,Sequelize,PostgreSQL, Mercado Pago, Cloudinary.']
+      tags:[' JavaScript, React, CSS, NodeJS, Express,Sequelize,PostgreSQL, Mercado Pago, Cloudinary.']
     },
 
      {
         title:'Henry Food',
-        description:'ingle page application que consume la API “FoodApi”. Permite la visualización de la información de las recetas de comida, ver a detalle cada una, filtrarlas, ordenarlas, crear nuevas y buscarlas por su nombre.',
-        link:'URL del nuevo proyecto',
-        GitHub:'https://github.com/aleja223/PI-Food',
+        description:[
+        "Ingle page application que consume la API FoodApi.",
+         "Permite la visualización de la información de las recetas de comida", 
+         "ver a detalle cada una, filtrarlas, ordenarlas, crear nuevas y buscarlas por su nombre."
+        ],
+        //link:'URL del nuevo proyecto',
+        gitHub:'https://github.com/aleja223/PI-Food',
         image:'/projects/henryFood.webp',
         tags:['JavaScript, React, Redux, HTML, CSS, PostgreSQL,Sequelize, Express, NodeJS.']
     }
 ]
 ---
 
-{
-    PROJECTS.map(({ image, title, description, tags }) => (
-        <article>
-            <h3 class="text-2xl front-semibold text-yellow-200 mb-2">{title}</h3>
-            <p class="text-lg text-white mb-4 text-pretty">{description}</p>
-            <ul class="text-lg text-white mb-4 text-pretty">
-                {tags.map(tag => (
-                    <li>{tag}</li>
+
+    {
+    PROJECTS.map(({ image, title, description, tags, link, gitHubFrontend, gitHubBackend, gitHub }) => (
+        <article class="mb-8">
+            <h3 class="text-2xl front-semibold text-zinc-200 mb-2">{title}</h3>
+            
+            <ul class="text-lg opacity-85 text-black mb-4 text-pretty list-disc pl-5 space-y-2">
+                {description.map((item) => (
+                    <li >{item}</li>
                 ))}
             </ul>
+            <span class="text-lg text-zinc-200 mb-4 text-pretty">Tecnologias:</span>
+            <ul class="text-lg opacity-85 text-black mb-4 text-pretty list-disc pl-5 space-y-2">
+                {tags.map((item) => (
+                    <li  class="inline-block mr-2">{item}</li>
+                ))}
+            </ul>
+            
+            <div class="mb-4 ">
+                {link && (
+                    <a 
+                        href={link} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        class="text-purple-950 hover:underline mr-4 border border-white/10"
+                    >
+                        Ver Proyecto
+                    </a>
+                )}
+                {gitHubFrontend && (
+                    <a 
+                        href={gitHubFrontend} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        class="text-purple-950 hover:underline mr-4 border border-white/10"
+                    >
+                        GitHub Frontend
+                    </a>
+                )}
+                {gitHubBackend && (
+                    <a 
+                        href={gitHubBackend} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        class="text-purple-950 hover:underline border border-white/10"
+                    >
+                        GitHub Backend
+                    </a>
+                )}
+                {gitHub && (
+                    <a 
+                        href={gitHub} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        class="text-purple-950 hover:underline border border-white/10"
+                    >
+                        GitHub 
+                    </a>
+                )}
+            </div>
+            
             <img 
-            class="rounded shadow-2xl shadow-white/10" 
-            src={image} 
-            alt={`captura de pantalla del proyecto ${title}`} />
+                class="rounded shadow-2xl shadow-white/10" 
+                src={image} 
+                alt={`captura de pantalla del proyecto ${title}`} 
+            />
         </article>
     ))
 }
